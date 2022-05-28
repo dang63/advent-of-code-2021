@@ -1,0 +1,24 @@
+def puzzle1(in1):
+    '''initialise counter
+    if 0 ignore first character
+    test whether measurement is larger than previous one
+    print result'''
+    count = 0
+    for i in range(len(in1)):
+        if i > 0:
+            if in1[i] > in1[i-1]:
+                count += 1
+    print("The number of times the value increased is " , count)
+
+'''initialise list
+read file into the list and convert to integers
+run the test function'''
+
+in1 = []
+with open("C:\\Users\\dan4g\\Documents\\Advent of Code 2021\\puzzle1.txt") as file:
+    for line in file:
+        clean = line.replace('\n' , '')
+        in1.append(clean)
+
+in1_to_int = list(map(int, in1))
+puzzle1(in1_to_int)
