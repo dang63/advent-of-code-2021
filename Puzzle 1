@@ -15,7 +15,7 @@ read file into the list and convert to integers
 run the test function'''
 
 in1 = []
-with open("C:\\Users\\dan4g\\Documents\\Advent of Code 2021\\puzzle1.txt") as file:
+with open("puzzle1.txt") as file:
     for line in file:
         clean = line.replace('\n' , '')
         in1.append(clean)
