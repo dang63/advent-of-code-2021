@@ -1,0 +1,21 @@
+# Puzzle 2
+def puzzle2(in1):
+    '''notes'''
+    count = 0
+    for i in range(len(in1)):
+        if i+4 > len(in1):
+            break
+        a = in1[i]+in1[i+1]+in1[i+2]
+        b = in1[i+1]+in1[i+2]+in1[i+3]
+        if b > a:
+            count += 1
+    print("The three measurement sliding window value increased ",count," times")
+    
+in1 = []
+with open("puzzle1.txt") as file:
+    for line in file:
+        clean = line.replace('\n' , '')
+        in1.append(clean)
+
+sliding_win = list(map(int, in1))
+puzzle2(sliding_win)
